@@ -59,7 +59,7 @@ export default ({ name, birthDate, backBtnClick }) => {
                             <p><svg width="20" height="20">
                                 <rect width="20" height="20" style={{ fill: "orange" }} />
                             </svg>
-                                <span className="ml-2">Intuitive = {Math.round(currentData.intuitive * 250 + 350)}%</span>
+                                <span className="ml-2">Intuitive = {Math.round(currentData.intuitive * 100)}%</span>
                             </p>
                         </Col>
                     </Row>
