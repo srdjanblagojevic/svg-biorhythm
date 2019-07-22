@@ -58,9 +58,9 @@ export default ({ graphData, ...rest }) => {
                 graphData.dates.map((t, index) => {
                     return (
                         <React.Fragment key={index}>
-                            <text x={`${index * 100 + 25}`} y="55" className="svg-grid-labels">{t.getDate()}</text>
+                            <text x={`${index * 100 + 25}`} y="55" className="svg-grid-labels" fill={t.getDay() === 0 ? "red" : ""}>{t.getDate()}</text>
                             <path d={`M${index * 100},700 v-700`} className="svg-grid-lines" />
-                            <text x={`${index * 100 + 25}`} y="675" className="svg-grid-labels">{getWeekDay(t.getDay()).substr(0, 2)}</text>
+                            <text x={`${index * 100 + 25}`} y="675" className="svg-grid-labels" fill={t.getDay() === 0 ? "red" : ""}>{getWeekDay(t.getDay()).substr(0, 2)}</text>
                         </React.Fragment>
                     )
                 })
@@ -77,10 +77,10 @@ export default ({ graphData, ...rest }) => {
             <GraphPath points={graphData.emotional} color={"green"} />
             <GraphPath points={graphData.intellectual} color={"blue"} />
             <GraphPath points={graphData.intuitive} color={"orange"} />
-            <GraphLegend text="Physical" color="red" x={1740} />
-            <GraphLegend text="Emotional" color="green" x={2020} />
-            <GraphLegend text="Intellectual" color="blue" x={2365} />
-            <GraphLegend text="Intuitive" color="orange" x={2730} />
+            <GraphLegend text="Physical" color="red" x={1705} />
+            <GraphLegend text="Emotional" color="green" x={2000} />
+            <GraphLegend text="Intellectual" color="blue" x={2350} />
+            <GraphLegend text="Intuitive" color="orange" x={2725} />
             <rect x="1400" y="3" width="100" height="697"
                 style={{ strokeWidth: "6", stroke: "black", fill: "rgba(255,255,0,0.1)" }} />
         </svg>
