@@ -1,7 +1,7 @@
 export const daysPassed = (date, birthDate) => {
     const startDate = new Date(birthDate);
     const timeDiff = (startDate) - (date);
-    return Math.round(Math.abs(timeDiff / (1000 * 60 * 60 * 24)))
+    return Math.floor(Math.abs(timeDiff / (1000 * 60 * 60 * 24)))
 }
 
 export const biorhythmCalc = ({ date, birthDate }) => {
