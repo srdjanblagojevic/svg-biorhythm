@@ -57,7 +57,7 @@ export default ({ graphData, ...rest }) => {
             {
                 graphData.dates.map((t, index) => {
                     return (
-                        <React.Fragment>
+                        <React.Fragment key={index}>
                             <text x={`${index * 100 + 25}`} y="55" className="svg-grid-labels">{t.getDate()}</text>
                             <path d={`M${index * 100},700 v-700`} className="svg-grid-lines" />
                             <text x={`${index * 100 + 25}`} y="675" className="svg-grid-labels">{getWeekDay(t.getDay()).substr(0, 2)}</text>
